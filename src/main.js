@@ -7,10 +7,10 @@ import flashHTML from './flash.html';
 import flashStyle from './flash.scss';
 
 export default class RTMP extends Flash {
-  static get name() { return 'rtmp'; }
-  static get tagName() { return 'object'; }
-  static get template() { return template(flashHTML); }
-  static get attributes() {
+  get name() { return 'rtmp'; }
+  get tagName() { return 'object'; }
+  get template() { return template(flashHTML); }
+  get attributes() {
     return {
       'data-rtmp': '',
       type: 'application/x-shockwave-flash',
