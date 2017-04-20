@@ -78,7 +78,7 @@ export default class RTMP extends Flash {
   get levels() {
     const levels = [];
 
-    for (let i = 0; i < this.numLevels; i++) {
+    for (let i = 0; i < this.numLevels; i += 1) {
       const bitrate = this.el.getBitrateForLevel(i);
 
       levels.push({
@@ -116,7 +116,9 @@ export default class RTMP extends Flash {
   _bootstrap() {
     this.el.width = '100%';
     this.el.height = '100%';
-    this.options.autoPlay && this.play();
+    if (this.options._autoPlay) {
+      this.play();
+    }
     this._setupSettings();
   }
 
