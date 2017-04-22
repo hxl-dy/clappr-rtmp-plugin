@@ -50,14 +50,5 @@
     "style-loader": "^0.12.4",
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^1.12.2"
-  },
-  "eslintConfig": {
-    "extends": "airbnb",
-    "plugins": [
-      "react",
-      "jsx-a11y",
-      "import"
-    ],
-    "env": {}
   }
 }
