@@ -1,6 +1,6 @@
 {
   "name": "clappr-rtmp",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "RTMP Support for Clappr Player",
   "main": "dist/rtmp.js",
   "author": "Flávio Ribeiro",
@@ -21,8 +21,9 @@
   },
   "scripts": {
     "build_swf": "cd ./src/ && sh build_player.sh",
-    "release": "node_modules/.bin/webpack --no-minimize && node_modules/.bin/webpack --progress -d --optimize-minimize --optimize-dedupe --output-filename rtmp.min.js",
+    "builddev": "node_modules/.bin/webpack --no-minimize",
     "build": "node_modules/.bin/webpack --progress",
+    "release": "npm run builddev && npm run build",
     "watch": "node_modules/.bin/webpack --progress --watch",
     "test": "karma start --single-run --browsers Chrome",
     "start": "node_modules/.bin/webpack-dev-server --content-base public/ --output-public-path /latest --hot",

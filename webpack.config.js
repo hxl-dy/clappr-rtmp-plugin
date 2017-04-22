@@ -2,9 +2,7 @@ var path = require('path'),
     webpack = require('webpack'),
     TransferWebpackPlugin = require('transfer-webpack-plugin'),
     minimize = process.argv.indexOf('--no-minimize') === -1 ? true : false,
-    plugins = [new TransferWebpackPlugin([
-        { from: 'public/', to: 'assets/' }
-    ])],
+    plugins = [],
     filename = 'rtmp.js';
 
 if (minimize) {
