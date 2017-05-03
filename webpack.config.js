@@ -1,12 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const minimize = process.argv.indexOf('--no-minimize') === -1;
 const plugin = [];
 let filename = 'rtmp.js';
 
 if (minimize) {
-  plugin.push(new webpack.optimize.UglifyJsPlugin({ minimize: true }));
+  plugin.push(new UglifyJsPlugin({ minimize: true }));
   filename = 'rtmp.min.js';
 }
 
@@ -18,13 +19,6 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        loader: 'babel',
-        query: {
-          compact: true,
-        },
-      },
       {
         test: /\.scss$/,
         loaders: ['css', `sass?includePaths[]=${

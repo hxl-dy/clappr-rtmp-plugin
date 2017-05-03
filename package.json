@@ -49,6 +49,8 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.12.4",
+    "uglify-js": "github:mishoo/UglifyJS2#harmony",
+    "uglifyjs-webpack-plugin": "^0.4.3",
     "webpack": "^1.12.2"
   }
 }
