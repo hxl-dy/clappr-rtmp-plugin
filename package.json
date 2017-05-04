@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build_swf": "cd ./src/ && sh build_player.sh",
-    "builddev": "node_modules/.bin/webpack --no-minimize",
+    "builddev": "node_modules/.bin/webpack --optimize-minimize false",
     "build": "node_modules/.bin/webpack --progress",
     "release": "npm i && npm run builddev && npm run build && npm run build_swf",
     "watch": "node_modules/.bin/webpack --progress --watch",
@@ -51,6 +51,6 @@
     "style-loader": "^0.12.4",
     "uglify-js": "github:mishoo/UglifyJS2#harmony",
     "uglifyjs-webpack-plugin": "^0.4.3",
-    "webpack": "^1.12.2"
+    "webpack": "^2.4.1"
   }
 }
