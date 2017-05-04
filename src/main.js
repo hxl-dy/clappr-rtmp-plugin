@@ -116,7 +116,7 @@ export default class RTMP extends Flash {
   _bootstrap() {
     this.el.width = '100%';
     this.el.height = '100%';
-    if (this.options._autoPlay) {
+    if (this.options.autoPlay) {
       this.play();
     }
     this._setupSettings();
