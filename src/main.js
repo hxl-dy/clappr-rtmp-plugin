@@ -164,6 +164,7 @@ export default class RTMP extends Flash {
 
   get _switchRulesJSON() {
     if (this.options.rtmpConfig.switchRules !== undefined) {
+      // TODO: XXX: if i use single quote, can it work?
       return JSON.stringify(this.options.rtmpConfig.switchRules).replace(/"/g, '&quot;');
     }
 
