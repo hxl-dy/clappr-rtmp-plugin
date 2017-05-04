@@ -14,7 +14,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'index.js'),
   devtool: minimize ? 'source-map' : '',
   externals: {
-    clappr: 'clappr',
+    clappr: 'Clappr',
   },
   module: {
     loaders: [
