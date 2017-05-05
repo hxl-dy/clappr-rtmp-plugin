@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build_swf": "cd ./src/ && sh build_player.sh",
-    "webpack": "node_modules/.bin/webpack --no-minimize",
+    "webpack": "node_modules/.bin/webpack --optimize-minimize false",
     "webpack_ugly": "node_modules/.bin/webpack --progress",
     "release": "npm i && rm -rf dist/ && npm run webpack && npm run webpack_ugly && npm run build_swf",
     "watch": "node_modules/.bin/webpack --progress --watch",
@@ -49,6 +49,6 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.12.4",
-    "webpack": "^1.12.2"
+    "webpack": "^2.4.1"
   }
 }
